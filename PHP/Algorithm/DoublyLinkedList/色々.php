@@ -23,12 +23,12 @@ class LinkedList{
         return $m;
     }
     
-    public function Erase(Node $n):Note{
+    public function Erase(Node $n):Node{
         if ($n === $this->dummy){
             return $this->dummy;
         }
-        $n->prev->next = $n.next;
-        $n->next->prev = $n.prev;
+        $n->prev->next = $n->next;
+        $n->next->prev = $n->prev;
         return $n;
     }
     
